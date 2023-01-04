@@ -1,0 +1,24 @@
+import java.util.Scanner;
+ 
+public class BMI
+{
+   public static void main(String[] args){
+       Scanner keyboard = new Scanner(System.in);
+       
+       int feet,inch;
+       double weight;
+       
+       System.out.print("Your height (feet only): ");
+           feet = keyboard.nextInt();
+           
+       System.out.print("Your height (inches): ");
+           inch = keyboard.nextInt();
+           
+       System.out.print("Your weight in pounds: ");
+           weight = keyboard.nextDouble();
+       
+       int s = ((feet*12)+inch);
+       System.out.print("Your BMI is " + ((weight/(s*s))*703));
+       
+   }
+}
