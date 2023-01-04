@@ -1,0 +1,22 @@
+ 
+import java.util.Scanner;
+ 
+public class NAS
+{
+ public static void main(String[] args){
+     Scanner keyboard = new Scanner(System.in);
+     
+     String name;
+     int age;
+     double sal;
+     
+       System.out.print( "Hello. What is your name?\n" );
+           name = keyboard.next();
+       System.out.print( "\nHi, " + name + "! How old are you?\n" );
+           age = keyboard.nextInt();
+       System.out.print( "\nSo you're " + age + ", eh? That's not old at all!\nHow much do you make, " + name + "?\n");
+           sal = keyboard.nextDouble();
+       System.out.print( "\n" + sal + "! I hope that's not per hour and not per year! LOL!\n");
+           
+   }
+}
