@@ -1,0 +1,12 @@
+public class LetterOrVowel
+{
+  public static boolean check( String s )
+  {
+    String x = "1234567890AEIOUaeiou";
+    String t = s.substring(0,1);
+    if(v.indexOf(f)>-1){
+        return true;
+    }
+    return false;
+  }
+}
