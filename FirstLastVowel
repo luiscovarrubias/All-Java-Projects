@@ -1,0 +1,14 @@
+public class FirstLastVowel
+{
+  public static String go( String a )
+   {
+      String f = a.substring(0,1);
+      String l = a.substring(a.length()-1);
+      String vow = "aeiouAEIOU";
+      if(vow.indexOf(f)>=0 || vow.indexOf(l)>=0){
+          return "yes";
+      }else{
+          return "no";
+      }
+   }
+}  
