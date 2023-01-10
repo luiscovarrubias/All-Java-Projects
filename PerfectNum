@@ -1,0 +1,32 @@
+public class PerfectNum {
+
+    private int number;
+
+    public Perfect(int num) {
+        number = num;
+    }
+
+    public void setPerfect(int num) {
+        setPerfect(number);
+    }
+    public boolean isPerfect() {
+        int i = 1;
+        int total = 0;
+        do {
+            if (number % i == 0) {
+                total += i;
+                i++;
+            } else {
+                i++;
+            }
+        } while (number > i);
+        return number == total;
+    }
+
+    public String toString(){
+        if(isPerfect()){
+            return number + " is perfect.";
+        }
+        return number + " is not perfect.";
+    }
+}
