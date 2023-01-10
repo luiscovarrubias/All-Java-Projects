@@ -1,0 +1,32 @@
+class StringRemover {
+
+    private String sentence;
+    private String remove;
+    
+    public StringRemover(){
+        setRemover(sentence, remove);
+    }
+    public StringRemover(String s, String rem) {
+        sentence = s;
+        remove = rem;
+    }
+    public void setRemover(String s, String rem) {
+        sentence = s;
+        remove = rem;
+    }
+
+    public String removeStrings() {
+        String cleaned = sentence;
+        int loc = cleaned.indexOf(remove)-1;
+        int len = remove.length();
+        while(loc > -1){
+            cleaned = cleaned.substring(0, loc) + cleaned.substring(loc+len+1);
+            loc = cleaned.indexOf(remove) -1;
+        }
+        return cleaned;
+    }
+
+    public String toString() {
+        return sentence + " - to remove " + remove;
+    }
+}
