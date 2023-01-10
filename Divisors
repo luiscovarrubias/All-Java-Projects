@@ -1,0 +1,20 @@
+import static java.lang.System.*;
+
+public class Divisors {
+
+    public static String getDivisors(int number) {
+        String divisors = "";
+        int i = 1;
+        do {
+            if (number % i == 0) {
+                divisors += i + " ";
+                i++;
+            } else {
+                i++;
+            }
+        } while (number > i);
+
+        return number + " has divsisors " + divisors;
+    }
+
+}
