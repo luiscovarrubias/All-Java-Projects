@@ -1,0 +1,26 @@
+public class ReverseNumber {
+
+    private int number;
+
+    public ReverseNumber(int num) {
+        number = num;
+    }
+
+    public void setNumber(int num) {
+        setNumber(number);
+    }
+
+    public int getReverse() {
+        int rev = 0;
+        while(number > 0){
+            rev = rev*10 + number%10;
+            number /= 10;
+        }
+        return rev;
+    }
+    
+    public String toString()
+	{
+		return number + " reversed is " + getReverse();
+	}
+}
