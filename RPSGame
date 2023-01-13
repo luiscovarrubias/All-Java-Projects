@@ -3,18 +3,18 @@ public class RPSGame {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("What will you throw?");
+		System.out.print("What will you throw?");
 		String userMove = scan.nextLine().toLowerCase();
-		System.out.println("Computer Move: " + CompMove());
-		String compMove = CompMove().toLowerCase();
-		System.out.println(Outcome(userMove, compMove));
+		String compMove = CompMove();
+		System.out.println("Computer Move: " + compMove);
+		System.out.println(Outcome(userMove, compMove.toLowerCase()));
 	}
 
 	private static String CompMove() {
-		int num = (int)(Math.random() * 3);
+		int num = (int)(Math.random() * 3) + 1;
 		String move = "";
-		if(num == 0){ move = "Rock"; }
-		else if(num == 1) { move = "Paper"; }
+		if(num == 1){ move = "Rock"; }
+		else if(num == 2) { move = "Paper"; }
 		else { move = "Scissors"; }
 		return move;
 	}
@@ -22,12 +22,12 @@ public class RPSGame {
 	
 	private static String Outcome(String userMove, String compMove){
 		if(userMove.equals("scissors") && compMove.equals("paper") || userMove.equals("paper") && compMove.equals("rock") || userMove.equals("rock") && compMove.equals("scissors")) {
+
 			return "You Won!";
 		}
-		else if(userMove.equals(compMove)) {
+		else if(userMove.equalsIgnoreCase(compMove)) {
 			return "It's a Tie!";
 		}
 		else return "You Lose!";
 	}
-
 }
