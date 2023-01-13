@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class RPSGame {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("What will you throw?");
+		String userMove = scan.nextLine().toLowerCase();
+		System.out.println("Computer Move: " + CompMove());
+		String compMove = CompMove().toLowerCase();
+		System.out.println(Outcome(userMove, compMove));
+	}
+
+	private static String CompMove() {
+		int num = (int)(Math.random() * 3);
+		String move = "";
+		if(num == 0){ move = "Rock"; }
+		else if(num == 1) { move = "Paper"; }
+		else { move = "Scissors"; }
+		return move;
+	}
+	
+	
+	private static String Outcome(String userMove, String compMove){
+		if(userMove.equals("scissors") && compMove.equals("paper") || userMove.equals("paper") && compMove.equals("rock") || userMove.equals("rock") && compMove.equals("scissors")) {
+			return "You Won!";
+		}
+		else if(userMove.equals(compMove)) {
+			return "It's a Tie!";
+		}
+		else return "You Lose!";
+	}
+
+}
