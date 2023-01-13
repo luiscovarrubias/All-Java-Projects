@@ -18,7 +18,7 @@ public class BMI
            weight = keyboard.nextDouble();
        
        int s = ((feet*12)+inch);
-       System.out.print("Your BMI is " + ((weight/(s*s))*703));
+       System.out.printf("Your BMI is %.1f", (weight/(s*s))*703);
        
    }
 }
